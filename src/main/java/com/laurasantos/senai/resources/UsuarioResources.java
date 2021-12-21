@@ -1,4 +1,4 @@
-package com.luisasantos.senai.resources;
+package com.lauraasantos.senai.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.luisasantos.senai.domain.Usuario;
-import com.luisasantos.senai.services.UsuarioService;
+import com.laurasantos.senai.domain.Usuario;
+import com.laurasantos.senai.services.UsuarioService;
 
 @RestController
 @RequestMapping(value="/usuario")

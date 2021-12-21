@@ -1,9 +1,9 @@
-package com.luisasantos.senai.repositories;
+package com.laurasantos.senai.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.luisasantos.senai.domain.Usuario;
+import com.laurasantos.senai.domain.Usuario;
 
 @SuppressWarnings("rawtypes")
 @Repository

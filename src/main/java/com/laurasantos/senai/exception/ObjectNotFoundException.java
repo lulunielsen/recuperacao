@@ -1,4 +1,4 @@
-package com.luisasantos.senai.exception;
+package com.laurasantos.senai.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
 	

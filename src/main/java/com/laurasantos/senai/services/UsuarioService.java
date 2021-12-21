@@ -1,11 +1,11 @@
-package com.luisasantos.senai.services;
+package com.laurasantos.senai.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.luisasantos.senai.domain.Usuario;
-import com.luisasantos.senai.exception.ObjectNotFoundException;
-import com.luisasantos.senai.repositories.UsuarioRepository;
+import com.laurasantos.senai.domain.Usuario;
+import com.laurasantos.senai.exception.ObjectNotFoundException;
+import com.laurasantos.senai.repositories.UsuarioRepository;
 
 @Service
 public class UsuarioService {

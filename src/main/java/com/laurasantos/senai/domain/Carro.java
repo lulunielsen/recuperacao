@@ -1,4 +1,4 @@
-package com.luisasantos.senai.domain;
+package com.laurasantos.senai.domain;
 
 import java.io.Serializable;
 

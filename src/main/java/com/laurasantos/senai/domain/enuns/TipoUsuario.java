@@ -1,4 +1,4 @@
-package com.luisasantos.senai.domain.enuns;
+package com.laurasantos.senai.domain.enuns;
 
 public enum TipoUsuario {
 	

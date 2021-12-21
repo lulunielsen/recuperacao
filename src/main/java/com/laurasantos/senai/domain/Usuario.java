@@ -1,4 +1,4 @@
-package com.luisasantos.senai.domain;
+package com.laurasantos.senai.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.luisasantos.senai.domain.enuns.TipoUsuario;
+import com.laurasantos.senai.domain.enuns.TipoUsuario;
 
 import net.minidev.json.annotate.JsonIgnore;
 

@@ -1,4 +1,4 @@
-package com.luisa.modelagem.luisa_senai1;
+package com.laura.modelagem.laura;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -7,15 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Arrays;
 
 
-import com.luisasantos.senai.domain.Aluguel;
-import com.luisasantos.senai.domain.Usuario;
-import com.luisasantos.senai.domain.enuns.TipoUsuario;
-import com.luisasantos.senai.repositories.AluguelRepository;
-import com.luisasantos.senai.repositories.UsuarioRepository;
+import com.laurasantos.senai.domain.Aluguel;
+import com.laurasantos.senai.domain.Usuario;
+import com.laurasantos.senai.domain.enuns.TipoUsuario;
+import com.laurasantos.senai.repositories.AluguelRepository;
+import com.laurasantos.senai.repositories.UsuarioRepository;
 
 
 @SpringBootApplication
-public class LuisaSenai1Application implements CommandLineRunner {
+public class LauraSenai1Application implements CommandLineRunner {
 	
 	@Autowired
 	private AluguelRepository aluguelRepository;
