@@ -23,7 +23,7 @@ public class LauraSenai1Application implements CommandLineRunner {
 	private UsuarioRepository usuarioRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(LuisaSenai1Application.class, args);
+		SpringApplication.run(LauraSenai1Application.class, args);
 	}
 	
 	@Override
@@ -35,7 +35,7 @@ public class LauraSenai1Application implements CommandLineRunner {
 		
 		aluguelRepository.saveAll(Arrays.asList(alg1,alg2));
 		
-		Usuario<Object> usu = new Usuario<Object>(null, "Luisa Nielsen", TipoUsuario.PESSOAFISICA);
+		Usuario<Object> usu = new Usuario<Object>(null, "Laura Nielsen", TipoUsuario.PESSOAFISICA);
 		usuarioRepository.saveAll (Arrays.asList(usu));
 	}
 

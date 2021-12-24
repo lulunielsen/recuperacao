@@ -1,125 +1,80 @@
 package com.laurasantos.senai.domain;
 
+import java.util.Objects;
+
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Carro implements Serializable {
-	public static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	
+	@Column(name="id_carro")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String logradouro;
-	private String numero;
-	private String complemento;
-	private String bairro;
-	private String cep;
+	private String marca;
+	private String modelo;
+	public  String cor;
+	public  String placa;
 	
-	@JsonIgnore
-	@ManyToOne
-	@JoinColumn(name = "idUsuario")
-	private Usuario<?> usuario;
-	
-	@JoinColumn(name = "cidade_id")
-	@ManyToOne
-	private Carro carro;
-	
-	public void Aluguel(){
-		
+	public Carro(){
 	}
 	
-	public void Aluguel (Integer id, String logradouro, String numero, String complemento, String bairro, String cep, Usuario<?> usuario, Carro carro)
-	{ 
-		this.id = id;
-		this.logradouro = logradouro;
-		this.numero = numero;
-		this.complemento = complemento;
-		this.bairro = bairro;
-		this.cep = cep;
-		this.usuario = usuario;
-		this.carro = carro;
+	public Carro(Integer id,String marca, String modelo, String cor, String placa){
+	     super();
+	     this.id = id;
+		 this.marca = marca;
+		 this.modelo = modelo;    
+		 this.cor = cor;
+		 this.placa = placa;
 	}
 	
 	public Integer getId() {
 		return id;
 	}
-	
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getLogradouro() {
-		return logradouro;
+
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	public String getModelo() {
+		return modelo;
 	}
 
-	public String getNumero() {
-		return numero;
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public String getCor() {
+		return cor;
 	}
 
-	public void setNumero(String numero) {
-		this.numero = numero;
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	public String getPlaca() {
+		return placa;
 	}
 
-	public String getComplemento() {
-		return complemento;
+	public void setPlaca(String placa) {
+		this.placa = placa;
 	}
-
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-
-	public String getBairro() {
-		return bairro;
-	}
-
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-	public Usuario<?> getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario<?> usuario) {
-		this.usuario = usuario;
-	}
-
-	public Carro getCarro() {
-		return carro;
-	}
-
-	public void setCidade(Carro carro) {
-		this.carro = carro;
-	}
-
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
+		return Objects.hash(id, marca, modelo, cor, placa);
 	}
 
 	@Override
@@ -130,15 +85,10 @@ public class Carro implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		@SuppressWarnings("rawtypes")
-		Aluguel other = (Aluguel) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (id.equals(other.id))
-			return false;
-		return true;
+		Carro other = (Carro) obj;
+		return Objects.equals(id, other.id) && Objects.equals(cor, other.cor)
+				&& Objects.equals(modelo, other.modelo) && Objects.equals(placa, other.placa)
+				&& Objects.equals(id, other.id)&& Objects.equals(marca, other.marca);
 	}
-
 
 }

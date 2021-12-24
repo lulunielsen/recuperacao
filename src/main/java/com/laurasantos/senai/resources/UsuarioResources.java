@@ -1,4 +1,4 @@
-package com.lauraasantos.senai.resources;
+package com.laurasantos.senai.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +17,7 @@ public class UsuarioResources {
 	
 	@Autowired
 	private UsuarioService service;
-	
-	@SuppressWarnings("rawtypes")
+
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Usuario> find(@PathVariable Integer id){
 		Usuario obj = service.buscar(id);
